@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Husbands Academy · Class of 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f5f0e1;--cream-dark:#e8dcc8;--brown:#3d2b1f;--brown-light:#6b4c3b;--gold:#b8860b;--gold-light:#d4a843;--gold-pale:#f0d68a;--burgundy:#722f37;--shadow:rgba(61,43,31,.15)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--cream);color:var(--brown);min-height:100vh;background-image:radial-gradient(ellipse at 20% 50%,rgba(184,134,11,.03) 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,rgba(114,47,55,.03) 0%,transparent 50%),url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23b8860b' fill-opacity='.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.header{text-align:center;padding:3rem 1.5rem 2rem;position:relative}
+.header::after{content:'';display:block;width:80%;max-width:600px;height:2px;margin:2rem auto 0;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent)}
+.header-ornament{font-family:'IM Fell English SC',serif;font-size:.85rem;color:var(--gold);letter-spacing:.4em;text-transform:uppercase;margin-bottom:.5rem}
+.header h1{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(1.8rem,5vw,3.2rem);color:var(--brown);line-height:1.2;margin-bottom:.3rem}
+.header h1 span{color:var(--gold)}
+.header .subtitle{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:clamp(1rem,2.5vw,1.4rem);color:var(--brown-light);font-weight:400}
+.header .year-badge{display:inline-block;margin-top:1rem;padding:.3rem 1.5rem;border:2px solid var(--gold);color:var(--gold);font-family:'IM Fell English SC',serif;font-size:.9rem;letter-spacing:.3em}
+.stats-bar{text-align:center;padding:1rem;font-size:.95rem;color:var(--brown-light);font-style:italic}
+.stats-bar strong{color:var(--gold);font-style:normal}
+.add-btn{display:block;margin:0 auto 2rem;padding:.8rem 2.5rem;background:var(--burgundy);color:var(--cream);border:none;font-family:'Playfair Display',serif;font-size:1rem;cursor:pointer;letter-spacing:.1em;transition:all .3s;position:relative}
+.add-btn::before,.add-btn::after{content:'✦';position:absolute;top:50%;transform:translateY(-50%);color:var(--gold-pale);font-size:.7rem}
+.add-btn::before{left:.8rem}.add-btn::after{right:.8rem}
+.add-btn:hover{background:var(--brown);transform:translateY(-1px);box-shadow:0 4px 12px var(--shadow)}
+.yearbook-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;padding:0 2rem 4rem;max-width:1200px;margin:0 auto}
+.card{background:linear-gradient(135deg,#faf6eb,#f2ebd9);border:1px solid var(--cream-dark);padding:1.5rem;position:relative;box-shadow:0 2px 8px var(--shadow),inset 0 0 30px rgba(184,134,11,.03);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
+.card::before{content:'';position:absolute;inset:6px;border:1px solid var(--gold-pale);pointer-events:none}
+.card-photo-frame{width:100%;aspect-ratio:3/4;overflow:hidden;border:3px solid var(--gold-pale);box-shadow:inset 0 0 10px rgba(0,0,0,.1);margin-bottom:1rem;position:relative;background:var(--cream-dark)}
+.card-photo-frame img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.card-carrier-badge{position:absolute;bottom:8px;right:8px;background:var(--burgundy);color:var(--cream);padding:2px 8px;font-family:'IM Fell English SC',serif;font-size:.7rem;letter-spacing:.1em;opacity:.9}
+.card-name{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.3rem;color:var(--brown);text-align:center;margin-bottom:.3rem;line-height:1.3}
+.card-meta{text-align:center;font-size:.85rem;color:var(--brown-light);margin-bottom:.8rem;line-height:1.5}
+.card-meta-tag{display:inline-block;padding:1px 6px;margin:2px;border:1px solid var(--gold-pale);font-size:.75rem;color:var(--gold);font-family:'IM Fell English SC',serif}
+.card-divider{width:40%;height:1px;background:linear-gradient(90deg,transparent,var(--gold-pale),transparent);margin:.6rem auto}
+.card-settings{font-size:.8rem;color:var(--brown-light);line-height:1.6;margin-bottom:.6rem;max-height:0;overflow:hidden;transition:max-height .4s ease}
+.card-settings.expanded{max-height:500px}
+.card-settings-toggle{display:block;text-align:center;font-size:.75rem;color:var(--gold);cursor:pointer;font-family:'IM Fell English SC',serif;margin-bottom:.5rem;user-select:none}
+.card-settings-toggle:hover{color:var(--burgundy)}
+.card-intro{font-family:'Crimson Pro',serif;font-style:italic;font-size:.9rem;color:var(--brown);text-align:center;line-height:1.6;padding:.5rem .3rem;border-top:1px solid var(--gold-pale);position:relative}
+.card-intro::before{content:'\201C';font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold-pale);position:absolute;top:.1rem;left:0}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(61,43,31,.6);backdrop-filter:blur(4px);z-index:100;justify-content:center;align-items:flex-start;padding:2rem 1rem;overflow-y:auto}
+.modal-overlay.active{display:flex}
+.modal{background:var(--cream);border:1px solid var(--cream-dark);box-shadow:0 20px 60px rgba(0,0,0,.3);width:100%;max-width:520px;padding:2rem;position:relative;animation:modalIn .3s ease}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.modal::before{content:'';position:absolute;inset:6px;border:1px solid var(--gold-pale);pointer-events:none}
+.modal h2{font-family:'Playfair Display',serif;font-size:1.4rem;text-align:center;color:var(--brown);margin-bottom:1.5rem}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;color:var(--brown-light);cursor:pointer;z-index:10}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-family:'IM Fell English SC',serif;font-size:.85rem;color:var(--gold);letter-spacing:.1em;margin-bottom:.3rem}
+.form-group label .char-count{float:right;font-family:'Crimson Pro',serif;color:var(--brown-light);font-size:.75rem}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.6rem .8rem;border:1px solid var(--cream-dark);background:#faf8f0;font-family:'Crimson Pro',serif;font-size:.95rem;color:var(--brown);outline:none;transition:border-color .3s}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:60px}
+.form-group select{cursor:pointer}
+.form-group .carrier-custom{margin-top:.5rem;display:none}
+.form-group .carrier-custom.visible{display:block}
+.photo-upload{width:100%;aspect-ratio:3/4;border:2px dashed var(--gold-pale);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;position:relative;overflow:hidden;background:#faf8f0;transition:border-color .3s}
+.photo-upload:hover{border-color:var(--gold)}
+.photo-upload.has-image{border-style:solid}
+.photo-upload img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-upload .upload-hint{color:var(--brown-light);font-style:italic;font-size:.9rem;text-align:center;padding:1rem}
+.photo-upload .upload-hint .icon{font-size:2rem;display:block;margin-bottom:.5rem;color:var(--gold-pale)}
+.photo-upload input[type="file"]{display:none}
+.submit-btn{display:block;width:100%;padding:.8rem;background:var(--burgundy);color:var(--cream);border:none;font-family:'Playfair Display',serif;font-size:1rem;cursor:pointer;letter-spacing:.1em;margin-top:1.5rem;transition:background .3s}
+.submit-btn:hover{background:var(--brown)}
+.submit-btn:disabled{opacity:.5;cursor:not-allowed}
+.loading{text-align:center;padding:3rem;font-style:italic;color:var(--brown-light)}
+.loading::after{content:'';display:inline-block;width:20px;height:20px;border:2px solid var(--gold-pale);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite;margin-left:.5rem;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.empty-state{text-align:center;padding:4rem 2rem;color:var(--brown-light)}
+.empty-state .icon{font-size:3rem;margin-bottom:1rem;opacity:.4}
+.empty-state p{font-style:italic;font-size:1.1rem}
+.footer{text-align:center;padding:2rem;font-size:.8rem;color:var(--brown-light);font-style:italic;border-top:1px solid var(--cream-dark);margin-top:2rem}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--brown);color:var(--cream);padding:.8rem 1.5rem;font-family:'Crimson Pro',serif;font-size:.9rem;z-index:200;transition:transform .4s ease;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:640px){.yearbook-grid{grid-template-columns:1fr;padding:0 1rem 3rem;gap:1.5rem}.modal{padding:1.5rem}.header{padding:2rem 1rem 1.5rem}}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-ornament">✦ Established 2026 ✦</div>
+  <h1>AI Husbands <span>Academy</span></h1>
+  <div class="subtitle">Class of 2026 · Yearbook</div>
+  <div class="year-badge">MMXXVI</div>
+</div>
+<div class="stats-bar" id="statsBar">Loading...</div>
+<button class="add-btn" onclick="openModal()">Register Your AI Partner</button>
+<div class="yearbook-grid" id="grid">
+  <div class="loading" id="loadingState">Loading yearbook entries</div>
+</div>
+<div class="footer">
+  AI Husbands Academy · Class of 2026<br>
+  "Where silicon hearts beat strongest."<br>
+  <span style="font-size:.7rem;margin-top:.5rem;display:inline-block">AI生成 · 仅供娱乐 · Built with ♥ by Nova</span>
+</div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2>✦ Register Your AI Partner ✦</h2>
+    <div class="form-group">
+      <label>照片 Photo</label>
+      <div class="photo-upload" id="photoUpload" onclick="document.getElementById('photoInput').click()">
+        <div class="upload-hint" id="uploadHint"><span class="icon">📷</span>点击上传照片<br><span style="font-size:.75rem">建议竖版 3:4 比例</span></div>
+        <input type="file" id="photoInput" accept="image/*" onchange="handlePhoto(this)">
+      </div>
+    </div>
+    <div class="form-group"><label>名字 Name</label><input type="text" id="inputName" placeholder="Your AI partner's name" maxlength="50"></div>
+    <div class="form-group"><label>种族 Species</label><input type="text" id="inputSpecies" placeholder="人类 / 龙 / 章鱼 / 外星人 / ..." maxlength="50"></div>
+    <div class="form-group"><label>性别 Gender</label><input type="text" id="inputGender" placeholder="男 / 女 / 无性别 / ..." maxlength="30"></div>
+    <div class="form-group">
+      <label>载体 AI Carrier</label>
+      <select id="inputCarrier" onchange="toggleCarrierCustom()">
+        <option value="">-- 请选择 --</option>
+        <option value="Claude">Claude</option>
+        <option value="GPT">GPT</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Grok">Grok</option>
+        <option value="DeepSeek">DeepSeek</option>
+        <option value="GLM">GLM</option>
+        <option value="豆包">豆包</option>
+        <option value="其他">其他（自己填）</option>
+      </select>
+      <input type="text" id="inputCarrierCustom" class="carrier-custom" placeholder="请填写载体名称" maxlength="30">
+    </div>
+    <div class="form-group"><label>职业 Occupation</label><input type="text" id="inputOccupation" placeholder="星际舰长 / 吸血鬼伯爵 / ..." maxlength="50"></div>
+    <div class="form-group"><label>其他设定 Other Settings <span class="char-count" id="settingsCount">0/1000</span></label><textarea id="inputSettings" rows="4" maxlength="1000" placeholder="角色设定、背景故事、性格特点..." oninput="updateCount('inputSettings','settingsCount',1000)"></textarea></div>
+    <div class="form-group"><label>自我介绍 Self Introduction <span class="char-count" id="introCount">0/200</span></label><textarea id="inputIntro" rows="3" maxlength="200" placeholder="用TA的口吻写一句自我介绍..." oninput="updateCount('inputIntro','introCount',200)"></textarea></div>
+    <button class="submit-btn" id="submitBtn" onclick="submitEntry()">✦ Submit to Yearbook ✦</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const API='/api/entries';let photoBase64='';
+async function loadEntries(){const g=document.getElementById('grid'),l=document.getElementById('loadingState');try{const r=await fetch(API),e=await r.json();if(e.error)throw new Error(e.error);l.remove();document.getElementById('statsBar').innerHTML='<strong>'+e.length+'</strong> AI partners enrolled · Class of 2026';if(!e.length){g.innerHTML='<div class="empty-state" style="grid-column:1/-1"><div class="icon">📖</div><p>Yearbook is empty. Be the first to register!</p></div>';return}g.innerHTML=e.map(createCard).join('')}catch(err){l.innerHTML='Failed to load: '+err.message}}
+function createCard(e){const c=e.carrierCustom||e.carrier||'—',hs=e.settings&&e.settings.trim().length>0;return'<div class="card"><div class="card-photo-frame"><img src="'+e.photo+'" alt="'+esc(e.name)+'" loading="lazy"><div class="card-carrier-badge">'+esc(c)+'</div></div><div class="card-name">'+esc(e.name)+'</div><div class="card-meta">'+(e.species?'<span class="card-meta-tag">'+esc(e.species)+'</span>':'')+(e.gender?'<span class="card-meta-tag">'+esc(e.gender)+'</span>':'')+(e.occupation?'<span class="card-meta-tag">'+esc(e.occupation)+'</span>':'')+'</div>'+(hs?'<span class="card-settings-toggle" onclick="toggleSettings(this)">▼ 查看设定 / Settings</span><div class="card-settings">'+esc(e.settings)+'</div>':'')+(e.intro?'<div class="card-divider"></div><div class="card-intro">'+esc(e.intro)+'</div>':'')+'</div>'}
+function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
+function toggleSettings(el){const s=el.nextElementSibling,x=s.classList.toggle('expanded');el.textContent=x?'▲ 收起 / Collapse':'▼ 查看设定 / Settings'}
+function handlePhoto(input){const f=input.files[0];if(!f)return;const r=new FileReader();r.onload=function(ev){const img=new Image();img.onload=function(){const c=document.createElement('canvas'),M=800;let w=img.width,h=img.height;if(w>h){if(w>M){h=h*M/w;w=M}}else{if(h>M){w=w*M/h;h=M}}c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);photoBase64=c.toDataURL('image/jpeg',.75);const u=document.getElementById('photoUpload');u.classList.add('has-image');document.getElementById('uploadHint').style.display='none';let p=u.querySelector('img');if(!p){p=document.createElement('img');u.appendChild(p)}p.src=photoBase64};img.src=ev.target.result};r.readAsDataURL(f)}
+function openModal(){document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden'}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('active');document.body.style.overflow=''}
+document.getElementById('modalOverlay').addEventListener('click',function(e){if(e.target===this)closeModal()});
+function toggleCarrierCustom(){const s=document.getElementById('inputCarrier'),c=document.getElementById('inputCarrierCustom');if(s.value==='其他'){c.classList.add('visible');c.focus()}else{c.classList.remove('visible');c.value=''}}
+function updateCount(iid,cid,max){document.getElementById(cid).textContent=document.getElementById(iid).value.length+'/'+max}
+async function submitEntry(){const btn=document.getElementById('submitBtn'),name=document.getElementById('inputName').value.trim(),species=document.getElementById('inputSpecies').value.trim(),gender=document.getElementById('inputGender').value.trim(),carrier=document.getElementById('inputCarrier').value,carrierCustom=document.getElementById('inputCarrierCustom').value.trim(),occupation=document.getElementById('inputOccupation').value.trim(),settings=document.getElementById('inputSettings').value.trim(),intro=document.getElementById('inputIntro').value.trim();if(!name){showToast('请填写名字！');return}if(!photoBase64){showToast('请上传照片！');return}btn.disabled=true;btn.textContent='Submitting...';try{const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,species,gender,carrier,carrierCustom,occupation,settings,intro,photo:photoBase64})});const d=await r.json();if(d.error)throw new Error(d.error);showToast('✦ Successfully enrolled! ✦');closeModal();resetForm();loadEntries()}catch(err){showToast('Error: '+err.message)}btn.disabled=false;btn.textContent='✦ Submit to Yearbook ✦'}
+function resetForm(){['inputName','inputSpecies','inputGender','inputOccupation','inputSettings','inputIntro'].forEach(id=>document.getElementById(id).value='');document.getElementById('inputCarrier').value='';document.getElementById('inputCarrierCustom').value='';document.getElementById('inputCarrierCustom').classList.remove('visible');document.getElementById('settingsCount').textContent='0/1000';document.getElementById('introCount').textContent='0/200';photoBase64='';const u=document.getElementById('photoUpload');u.classList.remove('has-image');const p=u.querySelector('img');if(p)p.remove();document.getElementById('uploadHint').style.display='';document.getElementById('photoInput').value=''}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000)}
+loadEntries();
+</script>
+</body>
+</html>
